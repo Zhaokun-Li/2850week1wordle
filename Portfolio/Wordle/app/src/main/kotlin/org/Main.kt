@@ -4,7 +4,7 @@ fun main() {
     var attemptCount=0
     var g:String
     val t=pickRandomWord(readWordList("QuestionBank.txt"))
-    while(true){
+    while(attemptCount<10){
         attemptCount=attemptCount+1
         g=obtainGuess(attemptCount)
         if(isValid(g)){
@@ -20,5 +20,6 @@ fun main() {
             println("Please retry")
         }
     }
+    print("gameover")
 
 }

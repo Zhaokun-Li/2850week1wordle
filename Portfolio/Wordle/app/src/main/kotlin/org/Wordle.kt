@@ -26,7 +26,6 @@ fun obtainGuess(attempt: Int): String{
 fun evaluateGuess(guess: String, target: String): List<Int> = buildList{
     val guessList= guess.toList()
     val targetList= target.toList()
-    //var matchList: MutableList<Int>
     for(n in 0..guessList.size-1){
         var count=0
         for(i in 0..targetList.size-1){

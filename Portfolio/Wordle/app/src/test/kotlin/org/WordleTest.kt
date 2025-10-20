@@ -1,9 +1,27 @@
 package org
 
 import kotlin.test.Test
+import java.io.File
 import kotlin.test.assertEquals
+import kotlin.test.assertTrue
 
 class wordletest{
+    @Test
+    fun yesValid(){
+        val result=isValid("apple")
+        assert(result)
+    }
+    @Test
+    fun readlist(){
+        val result=readWordList("test.txt")
+        assertEquals(listOf("abcde","apple"),result)
+    }
+    @Test
+    fun pickword(){
+        val list=mutableListOf("apple","banan","asdfg")
+        val word=pickRandomWord(list)
+        assert(word in mutableListOf("apple","banan","asdfg"))
+    }
     @Test
     fun perfectMatch(){
         val result=evaluateGuess("apple", "apple")

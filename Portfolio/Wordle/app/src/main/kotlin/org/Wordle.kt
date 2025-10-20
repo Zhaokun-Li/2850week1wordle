@@ -20,7 +20,7 @@ fun pickRandomWord(words: MutableList<String>): String{
 
 fun obtainGuess(attempt: Int): String{
     println("attempt "+attempt+" Please guess a 5 characters word: ")
-    return  readln()
+    return  readln().lowercase()
 }
 
 fun evaluateGuess(guess: String, target: String): List<Int> = buildList{

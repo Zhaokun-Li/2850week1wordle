@@ -35,7 +35,6 @@ dependencies {
 tasks.named<JavaExec>("run") {
     standardInput = System.`in`
 }
-
 // Apply a specific Java toolchain to ease working on different environments.
 java {
     toolchain {
